@@ -69,7 +69,7 @@
                             <h1 class="text-white mb-4 animated slideInDown">Conecta equipos y desarrolla habilidades
                                 con la magia de los juegos de mesa</h1>
                             <p class="text-white pb-3 animated slideInDown">Danos tu email y nos pondremos en contacto contigo. </p>
-                            <form id="contact-form">
+                            <form id="contact-form" class="email-form">
                                 <div class="position-relative w-100 mt-3">
                                     <input name="user_email" id="user_email" class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email" placeholder="Tu Email" style="height: 58px;" required>
                                     <button type="button" class="btn btn-primary rounded-pill py-2 px-3 shadow-none position-absolute top-0 end-0 m-2" type="submit" value="Send Email" id="button">Enviar</button>
@@ -402,7 +402,7 @@
                         </div>-->
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <form id="contact-form">
+                        <form id="other-form" class="email-form">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
@@ -514,28 +514,33 @@
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-        emailjs.init('8z3jf17yUnnra-WBr')
-        const btn = document.getElementById('button');
-
-        document.getElementById('contact-form')
-        .addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        btn.value = 'Enviando...';
-
-        const serviceID = 'default_service';
-        const templateID = 'template_31a2y8o';
-
-        emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-            btn.value = 'Enviar mensaje';
-            alert('Enviado!');
-            }, (err) => {
-            btn.value = 'Enviar mensaje';
-            alert(JSON.stringify(err));
-            });
+        emailjs.init('8z3jf17yUnnra-WBr');
+    
+        // Listener para múltiples formularios
+        document.addEventListener('submit', function (event) {
+            // Solo actúa si el evento viene de un formulario con la clase "email-form"
+            if (event.target.matches('.email-form')) {
+                event.preventDefault();
+    
+                const form = event.target;
+                const btn = form.querySelector('button[type="submit"]'); // Encuentra el botón del formulario actual
+                btn.value = 'Enviando...';
+    
+                const serviceID = 'default_service';
+                const templateID = 'template_31a2y8o';
+    
+                emailjs.sendForm(serviceID, templateID, form)
+                    .then(() => {
+                        btn.value = 'Enviar mensaje';
+                        alert('¡Enviado con éxito!');
+                    }, (err) => {
+                        btn.value = 'Enviar mensaje';
+                        alert('Error: ' + JSON.stringify(err));
+                    });
+            }
         });
     </script>
+    
 
 
 </body>
