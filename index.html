@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>TimeLink</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="seguimiento de tiempo, gestión de proyectos, herramientas de productividad" name="keywords">
+    <meta content="Timelink ayuda a las empresas a hacer un seguimiento del tiempo, gestionar proyectos y mejorar la productividad del equipo." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -62,7 +63,7 @@
                 </div>
             </nav>
 
-            <div class="container-xxl bg-primary hero-header">
+            <div class="container-xxl bg-primary hero-header" style="margin-bottom: 0px;">
                 <div class="container">
                     <div class="row g-5 align-items-center">
                         <div class="col-lg-6 text-center text-lg-start">
@@ -70,8 +71,8 @@
                                 con la magia de los juegos de mesa</h1>
                             <p class="text-white pb-3 animated slideInDown">Danos tu email y nos pondremos en contacto contigo. </p>
                             <div class="position-relative w-100 mt-3">
-                                <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Tu Email" style="height: 58px;">
-                                <button type="button" class="btn btn-primary rounded-pill py-2 px-3 shadow-none position-absolute top-0 end-0 m-2">Enviar</button>
+                                <input name="email" class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email" placeholder="Tu Email" style="height: 58px;" required>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-3 shadow-none position-absolute top-0 end-0 m-2" id="submit-button">Enviar</button>
                             </div>
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
@@ -90,21 +91,21 @@
                 <div class="row g-4">
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="feature-item bg-light rounded text-center p-5">
-                            <i class="fa fa-4x fa-edit text-primary mb-4"></i>
+                            <i class="fa fa-4x fa-certificate text-primary mb-4"></i>
                             <h5 class="mb-3">¿Qué es?</h5>
                             <p class="m-0">Un servicio innovador de team building que utiliza <b>juegos de mesa</b> para fortalecer la cohesión, mejorar habilidades y crear experiencias memorables.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="feature-item bg-light rounded text-center p-5">
-                            <i class="fa fa-4x fa-sync text-primary mb-4"></i>
+                            <i class="fa fa-4x fa-american-sign-language-interpreting text-primary mb-4"></i>
                             <h5 class="mb-3">¿Por que elegirnos?</h5>
                             <p class="m-0">Con más de 20 años en eventos y dinámicas de equipo, nuestro enfoque transforma cómo los equipos colaboran y se desarrollan.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="feature-item bg-light rounded text-center p-5">
-                            <i class="fa fa-4x fa-draw-polygon text-primary mb-4"></i>
+                            <i class="fa fa-4x fa-users text-primary mb-4"></i>
                             <h5 class="mb-3">Personalización</h5>
                             <p class="m-0">Diseñamos la selección de juegos según las metas y valores de tu equipo.</p>
                         </div>
@@ -242,28 +243,28 @@
                 <div class="row g-4">
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="advanced-feature-item text-center rounded py-5 px-4">
-                            <i class="fa fa-edit fa-3x text-primary mb-4"></i>
+                            <i class="fa fa-bus fa-3x text-primary mb-4"></i>
                             <h5 class="mb-3">Traslado</h5>
                             <p class="m-0">Facilitamos el medio de transporte desde sus instalaciones</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="advanced-feature-item text-center rounded py-5 px-4">
-                            <i class="fa fa-sync fa-3x text-primary mb-4"></i>
+                            <i class="fa fa-home fa-3x text-primary mb-4"></i>
                             <h5 class="mb-3">Espacio</h5>
                             <p class="m-0">El lugar de realización de la actividad es ESPACIOS VALDEOLIVA ubicado en Ctra.Madrid-Colmenar (M-607) Km.29,500 28770 Colmenar Viejo (Madrid)</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="advanced-feature-item text-center rounded py-5 px-4">
-                            <i class="fa fa-laptop fa-3x text-primary mb-4"></i>
+                            <i class="fa fa-gamepad fa-3x text-primary mb-4"></i>
                             <h5 class="mb-3">Dinámica</h5>
                             <p class="m-0">Contamos con el espacio ideal y personal cualificado para la realización de la actividad</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="advanced-feature-item text-center rounded py-5 px-4">
-                            <i class="fa fa-draw-polygon fa-3x text-primary mb-4"></i>
+                            <i class="fa fa-coffee fa-3x text-primary mb-4"></i>
                             <h5 class="mb-3">Catering</h5>
                             <p class="m-0">Nos encargamos de los Coffee Break y del almuerzo con diferentes opciones a elegir</p>
                         </div>
@@ -315,42 +316,42 @@
                         <h1 class="mb-4">Lo que hace único a TeamLink</h1>
                         <ul class="process mb-0">
                             <li>
-                                <span><i class="fa fa-cog"></i></span>
+                                <span><i class="fa fa-trophy"></i></span>
                                 <div>
                                     <h5>El poder de los juegos de mesa</h5>
                                     <p>Experiencia tangible y participativa, lejos de la gamificación digital</p>
                                 </div>
                             </li>
                             <li>
-                                <span><i class="fa fa-address-card"></i></span>
+                                <span><i class="fa fa-plug"></i></span>
                                 <div>
                                     <h5>Interacción real</h5>
                                     <p>Promovemos conexiones humanas genuinas, sin tecnología de por medio</p>
                                 </div>
                             </li>
                             <li>
-                                <span><i class="fa fa-check"></i></span>
+                                <span><i class="fa fa-briefcase"></i></span>
                                 <div>
                                     <h5>Estrategia laboral</h5>
                                     <p>Cada juego diseñado para reflejar retos y situaciones reales</p>
                                 </div>
                             </li>
                             <li>
-                                <span><i class="fa fa-check"></i></span>
+                                <span><i class="fa fa-bullseye"></i></span>
                                 <div>
                                     <h5>Flexibilidad temática</h5>
                                     <p>Personalización de juegos según los objetivos de tu empresa</p>
                                 </div>
                             </li>
                             <li>
-                                <span><i class="fa fa-check"></i></span>
+                                <span><i class="fa fa-rocket"></i></span>
                                 <div>
                                     <h5>Diversión memorable</h5>
                                     <p>Una experiencia que queda en la mente y corazón del equipo</p>
                                 </div>
                             </li>
                             <li>
-                                <span><i class="fa fa-check"></i></span>
+                                <span><i class="fa fa-building"></i></span>
                                 <div>
                                     <h5>Espacio propio</h5>
                                     <p>Disponemos de unas instalaciones en la sierra de Madrid totalmente equipadas para la realización de la actividad con un entorno privilegiado</p>
@@ -370,7 +371,7 @@
                 <div class="row g-5">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                         <h1 class="mb-3">Contacta con nosotros</h1>
-                        <p class="mb-4">¡Dá el primer paso hacia un equipo más unido y efectivo! Reserva tu experiencia con TeamLink hoy.</p>
+                        <p class="mb-4">¡Da el primer paso hacia un equipo más unido y efectivo! Reserva tu experiencia con TeamLink hoy.</p>
                         <div class="d-flex mb-4">
                             <div class="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
                                 <i class="fa fa-phone-alt"></i>
@@ -400,29 +401,29 @@
                         </div>-->
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <form>
+                        <form id="contact-form">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
                                         <label for="name">Tu nombre</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
                                         <label for="email">Tu Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <input type="text" class="form-control" name= "subject" id="subject" placeholder="Subject">
                                         <label for="subject">Asunto</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                        <textarea class="form-control" placeholder="Leave a message here" name="message" id="message" style="height: 150px"></textarea>
                                         <label for="message">Mensaje</label>
                                     </div>
                                 </div>
@@ -509,6 +510,29 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("service_a60oswb"); // Replace with your actual User ID
+        })();
+    </script>
+    <script type="text/javascript">
+    const form = document.getElementById('contact-form');
+    
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        emailjs.sendForm('template_31a2y8o', 'template_31a2y8o', form)
+            .then(function(response) {
+                console.log('Success!', response);
+                alert('¡Mensaje enviado con éxito!');
+            }, function(error) {
+                console.log('Failed...', error);
+                alert('Hubo un error al enviar el mensaje.');
+            });
+    });
+</script>
+
+
 </body>
 
 </html>
